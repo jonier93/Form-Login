@@ -1,4 +1,5 @@
 document.querySelector("#btnRegistrar").addEventListener('click', validar)
+document.querySelector('#btnVolver').addEventListener('click', volver)
 function validar(evento) {    
     let nombre = document.getElementById('name').value
     let apellido = document.getElementById('lastname').value
@@ -8,6 +9,13 @@ function validar(evento) {
     let auxNum = false
     let error = false
     let vectorPassword = contrasena.split('')
+    let aceptar = document.getElementById('acepto').checked
+    
+    if (aceptar == false) {
+        alert("Debe aceptar los términos")
+        evento.preventDefault()
+        error = true
+    }
     if (nombre == "")  {
         alert("Debe ingresar un nombre")
         evento.preventDefault()
@@ -59,4 +67,8 @@ function validar(evento) {
     if (error == false) {
         alert("Usuario creado exitosamente")
     }
+}
+
+function volver() {
+    window.location.href = "login.html"
 }

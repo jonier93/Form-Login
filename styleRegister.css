@@ -21,3 +21,12 @@ button {
     padding-left: 3%;
     padding-right: 3%;
 }
+
+#btnVolver{
+    position: absolute;
+    left: 80%;
+    top:7%;
+    font-size: 15px;
+    padding: 0.5%;
+    background-color: blueviolet;
+}
